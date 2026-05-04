@@ -1,0 +1,385 @@
+{
+  "periodo": "II",
+  "anio": "2026",
+  "asignatura": "Cálculo II  (MM202)",
+  "coordinador": "Erick Pineda",
+  "email": "erickpineda@unah.edu.hn",
+  "observacion": "Puntos de Examen:                        70%\n<br>\nLaboratorio:                                      25%\n<br>\nTarea asignada por el profesor: 5%\n<br>\nCada Lección debe ser completada para que se habilite la actividad principal correspondiente.\n<br>\n<b>Examen de reposición: Viernes, 7 de agosto de 2026, 7 a 8:50 am. </b> ",
+  "unidades": [
+    {
+      "nombre": "Unidad 1",
+      "color": "#4f46e5",
+      "temas": [
+        {
+          "nombre": "T1: Integración por partes ",
+          "modalidad": "Mixto",
+          "leccion": {
+            "inicio": "11/05/2026",
+            "fin": "04/06/2026"
+          },
+          "actividad": {
+            "inicio": "11/05/2026",
+            "fin": "04/06/2026"
+          }
+        },
+        {
+          "nombre": "T2: Integración trigonométrica ",
+          "modalidad": "Presencial",
+          "leccion": {
+            "inicio": "",
+            "fin": ""
+          },
+          "actividad": {
+            "inicio": "11/05/2026",
+            "fin": "04/06/2026"
+          }
+        },
+        {
+          "nombre": "T3: Sustitución trigonométrica",
+          "modalidad": "Presencial",
+          "leccion": {
+            "inicio": "",
+            "fin": ""
+          },
+          "actividad": {
+            "inicio": "11/05/2026",
+            "fin": "04/06/2026"
+          }
+        },
+        {
+          "nombre": "T4: Integración usando descomposición en fracciones parciales",
+          "modalidad": "Mixto",
+          "leccion": {
+            "inicio": "20/05/2026",
+            "fin": "04/06/2026"
+          },
+          "actividad": {
+            "inicio": "11/05/2026",
+            "fin": "04/06/2026"
+          }
+        },
+        {
+          "nombre": "T5: Integración de funciones racionales de senos y cosenos",
+          "modalidad": "Virtual",
+          "leccion": {
+            "inicio": "15/05/2026",
+            "fin": "22/05/2026"
+          },
+          "actividad": {
+            "inicio": "11/05/2026",
+            "fin": "04/06/2026"
+          }
+        },
+        {
+          "nombre": "T6: Cálculo de volúmenes de sólidos de revolución ",
+          "modalidad": "Presencial",
+          "leccion": {
+            "inicio": "",
+            "fin": ""
+          },
+          "actividad": {
+            "inicio": "11/05/2026",
+            "fin": "04/06/2026"
+          }
+        },
+        {
+          "nombre": "T7: Integrales impropias",
+          "modalidad": "Presencial",
+          "leccion": {
+            "inicio": "",
+            "fin": ""
+          },
+          "actividad": {
+            "inicio": "11/05/2026",
+            "fin": "04/06/2026"
+          }
+        },
+        {
+          "nombre": "T8: Planos, cilindros y superficies cuádricas",
+          "modalidad": "Mixto",
+          "leccion": {
+            "inicio": "21/05/2026",
+            "fin": "27/05/2026"
+          },
+          "actividad": {
+            "inicio": "11/05/2026",
+            "fin": "04/06/2026"
+          }
+        },
+        {
+          "nombre": "T9: Funciones de varias variables",
+          "modalidad": "Presencial",
+          "leccion": {
+            "inicio": "",
+            "fin": ""
+          },
+          "actividad": {
+            "inicio": "11/05/2026",
+            "fin": "04/06/2026"
+          }
+        },
+        {
+          "nombre": "T10: Límites y continuidad de funciones de dos y tres variables.    ",
+          "modalidad": "Virtual",
+          "leccion": {
+            "inicio": "28/05/2026",
+            "fin": "04/06/2026"
+          },
+          "actividad": {
+            "inicio": "11/05/2026",
+            "fin": "04/06/2026"
+          }
+        },
+        {
+          "nombre": "T11: Derivadas parciales                 ",
+          "modalidad": "Virtual",
+          "leccion": {
+            "inicio": "28/05/2026",
+            "fin": "02/06/2026"
+          },
+          "actividad": {
+            "inicio": "11/05/2026",
+            "fin": "04/06/2026"
+          }
+        }
+      ],
+      "tarea": "Asignada por el profesor",
+      "examen": "2026-06-05T07:00",
+      "examenFin": ""
+    },
+    {
+      "nombre": "Unidad 2",
+      "color": "#10b981",
+      "temas": [
+        {
+          "nombre": "T1: Regla de la cadena, derivación implícita                                                                                 Regla de la cadena, derivación implícita                                                          ",
+          "modalidad": "Presencial",
+          "leccion": {
+            "inicio": "",
+            "fin": ""
+          },
+          "actividad": {
+            "inicio": "05/06/2026",
+            "fin": "02/07/2026"
+          }
+        },
+        {
+          "nombre": "T2: Derivada direccional y vector gradiente",
+          "modalidad": "Mixto",
+          "leccion": {
+            "inicio": "05/06/2026",
+            "fin": "11/06/2026"
+          },
+          "actividad": {
+            "inicio": "05/06/2026",
+            "fin": "02/07/2026"
+          }
+        },
+        {
+          "nombre": "T3: Plano tangente a una superficie",
+          "modalidad": "Presencial",
+          "leccion": {
+            "inicio": "",
+            "fin": ""
+          },
+          "actividad": {
+            "inicio": "05/06/2026",
+            "fin": "02/07/2026"
+          }
+        },
+        {
+          "nombre": "T4: Valores extremos y puntos de silla, problemas de optimización",
+          "modalidad": "Presencial",
+          "leccion": {
+            "inicio": "",
+            "fin": ""
+          },
+          "actividad": {
+            "inicio": "05/06/2026",
+            "fin": "02/07/2026"
+          }
+        },
+        {
+          "nombre": "T5: Integrales dobles sobre regiones rectangulares",
+          "modalidad": "Presencial",
+          "leccion": {
+            "inicio": "",
+            "fin": ""
+          },
+          "actividad": {
+            "inicio": "05/06/2026",
+            "fin": "02/07/2026"
+          }
+        },
+        {
+          "nombre": "T6: Integrales dobles sobre regiones generales",
+          "modalidad": "Presencial",
+          "leccion": {
+            "inicio": "",
+            "fin": ""
+          },
+          "actividad": {
+            "inicio": "05/06/2026",
+            "fin": "02/07/2026"
+          }
+        },
+        {
+          "nombre": "T7: Integrales dobles en coordenadas polares",
+          "modalidad": "Presencial",
+          "leccion": {
+            "inicio": "",
+            "fin": ""
+          },
+          "actividad": {
+            "inicio": "05/06/2026",
+            "fin": "02/07/2026"
+          }
+        },
+        {
+          "nombre": "T8: Cálculo de áreas y volúmenes mediante integrales dobles",
+          "modalidad": "Presencial",
+          "leccion": {
+            "inicio": "",
+            "fin": ""
+          },
+          "actividad": {
+            "inicio": "05/06/2026",
+            "fin": "02/07/2026"
+          }
+        },
+        {
+          "nombre": "T9: Integrales triples en coordenadas rectangulares",
+          "modalidad": "Presencial",
+          "leccion": {
+            "inicio": "",
+            "fin": ""
+          },
+          "actividad": {
+            "inicio": "05/06/2026",
+            "fin": "02/07/2026"
+          }
+        },
+        {
+          "nombre": "T10: Integrales triples en coordenadas cilíndricas y esféricas, cálculo de volúmenes",
+          "modalidad": "Virtual",
+          "leccion": {
+            "inicio": "01/07/2026",
+            "fin": "05/07/2026"
+          },
+          "actividad": {
+            "inicio": "05/06/2026",
+            "fin": "02/07/2026"
+          }
+        }
+      ],
+      "tarea": "Asignada por el profesor",
+      "examen": "2026-07-03T07:00",
+      "examenFin": ""
+    },
+    {
+      "nombre": "Unidad 3",
+      "color": "#f59e0b",
+      "temas": [
+        {
+          "nombre": "T1: Sucesiones ",
+          "modalidad": "Presencial",
+          "leccion": {
+            "inicio": "",
+            "fin": ""
+          },
+          "actividad": {
+            "inicio": "03/07/2026",
+            "fin": "30/07/2026"
+          }
+        },
+        {
+          "nombre": "T2: Series infinitas ",
+          "modalidad": "Presencial",
+          "leccion": {
+            "inicio": "",
+            "fin": ""
+          },
+          "actividad": {
+            "inicio": "03/07/2026",
+            "fin": "30/07/2026"
+          }
+        },
+        {
+          "nombre": "T3: Criterio de la integral ",
+          "modalidad": "Virtual",
+          "leccion": {
+            "inicio": "08/07/2026",
+            "fin": "12/07/2026"
+          },
+          "actividad": {
+            "inicio": "03/07/2026",
+            "fin": "30/07/2026"
+          }
+        },
+        {
+          "nombre": "T4: Criterio de comparación",
+          "modalidad": "Presencial",
+          "leccion": {
+            "inicio": "",
+            "fin": ""
+          },
+          "actividad": {
+            "inicio": "03/07/2026",
+            "fin": "30/07/2026"
+          }
+        },
+        {
+          "nombre": "T5: Criterio de la razón y de la raíz",
+          "modalidad": "Presencial",
+          "leccion": {
+            "inicio": "",
+            "fin": ""
+          },
+          "actividad": {
+            "inicio": "03/07/2026",
+            "fin": "30/07/2026"
+          }
+        },
+        {
+          "nombre": "T6: Series alternantes y convergencia condicional",
+          "modalidad": "Presencial",
+          "leccion": {
+            "inicio": "",
+            "fin": ""
+          },
+          "actividad": {
+            "inicio": "03/07/2026",
+            "fin": "30/07/2026"
+          }
+        },
+        {
+          "nombre": "T7: Series de potencia: intervalo y radio de convergencia, derivación e integración",
+          "modalidad": "Presencial",
+          "leccion": {
+            "inicio": "",
+            "fin": ""
+          },
+          "actividad": {
+            "inicio": "03/07/2026",
+            "fin": "30/07/2026"
+          }
+        },
+        {
+          "nombre": "T8: Series de Taylor",
+          "modalidad": "Presencial",
+          "leccion": {
+            "inicio": "",
+            "fin": ""
+          },
+          "actividad": {
+            "inicio": "03/07/2026",
+            "fin": "30/07/2026"
+          }
+        }
+      ],
+      "tarea": "Asignada por el profesor",
+      "examen": "2026-07-31T07:00",
+      "examenFin": ""
+    }
+  ]
+}

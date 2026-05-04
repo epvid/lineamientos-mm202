@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MM202 - Cálculo II | Lineamientos Académicos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Canvases -->
+        <canvas id="drawing-canvas"></canvas>
+        <canvas id="pointer-canvas"></canvas>
+
+        <!-- Controles de Presentación -->
+        <div id="controls" class="glass-panel">
+            <button id="menu-btn" title="Índice"><i data-lucide="menu"></i></button>
+            <div class="divider"></div>
+            <button id="prev-btn" title="Anterior"><i data-lucide="chevron-left"></i></button>
+            <span id="slide-number">1 / 12</span>
+            <button id="next-btn" title="Siguiente"><i data-lucide="chevron-right"></i></button>
+            <div class="divider"></div>
+            <button id="pen-btn" title="Activar Lápiz"><i data-lucide="pen-tool"></i></button>
+            <button id="laser-btn" title="Puntero Láser"><i data-lucide="zap"></i></button>
+            <button id="clear-btn" title="Limpiar Dibujo"><i data-lucide="trash-2"></i></button>
+            <div id="pen-color-picker" class="hidden">
+                <div class="color-dot active" data-color="#4CC9F0" style="background: #4CC9F0;"></div>
+                <div class="color-dot" data-color="#FF4D6D" style="background: #FF4D6D;"></div>
+                <div class="color-dot" data-color="#FFD166" style="background: #FFD166;"></div>
+            </div>
+        </div>
+
+        <!-- Sidebar / Menú Lateral -->
+        <div id="sidebar" class="glass-panel">
+            <div class="sidebar-header">
+                <h3>Contenidos</h3>
+                <button id="close-sidebar"><i data-lucide="x"></i></button>
+            </div>
+            <ul id="index-list">
+                <!-- Se llenará dinámicamente con JS -->
+            </ul>
+        </div>
+
+        <!-- Slides -->
+        <main id="slider">
+            <!-- Slide 1: Portada -->
+            <section class="slide active" id="slide-1">
+                <div class="content center">
+                    <div class="badge animate-pop">II PAC-2026</div>
+                    <h1 class="animate-slide-up">Cálculo II (MM202)</h1>
+                    <h2 class="animate-slide-up delay-1">Lineamientos Académicos</h2>
+                    <div class="math-decoration">∫ f(x) dx</div>
+                </div>
+            </section>
+
+            <!-- Slide 2: Índice (REDISEÑADO) -->
+            <section class="slide" id="slide-2">
+                <div class="content">
+                    <h3 class="slide-title">Puntos a tratar</h3>
+                    <div class="index-grid">
+                        <div class="index-item animate-pop" data-jump="2">
+                            <span class="index-number">01</span>
+                            <div class="index-info"><i data-lucide="shield-check"></i><span>Objetivos</span></div>
+                        </div>
+                        <div class="index-item animate-pop delay-1" data-jump="3">
+                            <span class="index-number">02</span>
+                            <div class="index-info"><i data-lucide="bar-chart-3"></i><span>Evaluación</span></div>
+                        </div>
+                        <div class="index-item animate-pop delay-2" data-jump="4">
+                            <span class="index-number">03</span>
+                            <div class="index-info"><i data-lucide="graduation-cap"></i><span>Exámenes</span></div>
+                        </div>
+                        <div class="index-item animate-pop delay-1" data-jump="5">
+                            <span class="index-number">04</span>
+                            <div class="index-info"><i data-lucide="help-circle"></i><span>Laboratorio</span></div>
+                        </div>
+                        <div class="index-item animate-pop delay-2" data-jump="6">
+                            <span class="index-number">05</span>
+                            <div class="index-info"><i data-lucide="calendar"></i><span>Cronograma</span></div>
+                        </div>
+                        <div class="index-item animate-pop delay-3" data-jump="7">
+                            <span class="index-number">06</span>
+                            <div class="index-info"><i data-lucide="layout"></i><span>Jornalización</span></div>
+                        </div>
+                        <div class="index-item animate-pop delay-1" data-jump="8">
+                            <span class="index-number">07</span>
+                            <div class="index-info"><i data-lucide="folder-open"></i><span>Repositorio</span></div>
+                        </div>
+                        <div class="index-item animate-pop delay-2" data-jump="9">
+                            <span class="index-number">08</span>
+                            <div class="index-info"><i data-lucide="clock"></i><span>Fechas Clave</span></div>
+                        </div>
+                        <div class="index-item animate-pop delay-3" data-jump="10">
+                            <span class="index-number">09</span>
+                            <div class="index-info"><i data-lucide="message-square"></i><span>Contacto</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 3: Objetivos de la Coordinación -->
+            <section class="slide" id="slide-3">
+                <div class="content">
+                    <h3 class="slide-title">Objetivos de la Coordinación</h3>
+                    <div class="grid-3">
+                        <div class="card animate-fade-in">
+                            <i data-lucide="shield-check"></i>
+                            <h4>Consistencia</h4>
+                            <p>Estandarización de contenidos en <span class="highlight">todas las secciones</span>.</p>
+                        </div>
+                        <div class="card animate-fade-in delay-1">
+                            <i data-lucide="award"></i>
+                            <h4>Calidad</h4>
+                            <p>Excelencia académica en la <span class="highlight">enseñanza del cálculo</span>.</p>
+                        </div>
+                        <div class="card animate-fade-in delay-2">
+                            <i data-lucide="trending-up"></i>
+                            <h4>Éxito Estudiantil</h4>
+                            <p>Maximizar el <span class="highlight">índice de aprobación</span>.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: Evaluación -->
+            <section class="slide" id="slide-4">
+                <div class="content">
+                    <h3 class="slide-title">Sistema de Evaluación</h3>
+                    <div class="split-view">
+                        <div class="stats-container">
+                            <div class="stat-item animate-slide-right">
+                                <span class="percent">70%</span>
+                                <span class="label">Exámenes</span>
+                            </div>
+                            <div class="stat-item animate-slide-right delay-1">
+                                <span class="percent">30%</span>
+                                <span class="label">Acumulativo</span>
+                            </div>
+                        </div>
+                        <div class="info-box animate-fade-in delay-2">
+                            <p style="margin-bottom: 15px;">
+                                Las fechas de exámenes están <span class="highlight">unificadas</span> y son de carácter
+                                obligatorio para todas las secciones coordinadas.
+                            </p>
+                            <div
+                                style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; font-size: 1.05rem;">
+                                <p>Sobre el <span style="color: var(--text-secondary); font-weight: 600;">30%
+                                        acumulativo</span>:</p>
+                                <ul style="list-style: none; margin-top: 10px;">
+                                    <li><i data-lucide="chevron-right"
+                                            style="color: var(--text-tertiary); width: 14px; vertical-align: middle;"></i>
+                                        <span class="highlight">25%</span>: Actividades en Campus Virtual (Laboratorio).
+                                    </li>
+                                    <li><i data-lucide="chevron-right"
+                                            style="color: var(--text-tertiary); width: 14px; vertical-align: middle;"></i>
+                                        <span class="highlight">5%</span>: Asignación a criterio del profesor.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5: Sobre los exámenes -->
+            <section class="slide" id="slide-5">
+                <div class="content">
+                    <h3 class="slide-title">Composición de los Exámenes</h3>
+                    <div class="grid-3">
+                        <div class="card animate-fade-in">
+                            <i data-lucide="layers" style="color:var(--text-tertiary)"></i>
+                            <h4 style="color:var(--text-secondary)">Estructura</h4>
+                            <p>Cada evaluación consta usualmente de <span class="highlight">7 ejercicios</span>
+                                diseñados para cubrir los objetivos de la unidad.</p>
+                        </div>
+                        <div class="card animate-fade-in delay-1">
+                            <i data-lucide="database" style="color:var(--text-tertiary)"></i>
+                            <h4 style="color:var(--text-secondary)">Fuente de Ejercicios</h4>
+                            <p>Se garantiza que al menos el <span class="highlight">50%</span> provenga del banco
+                                oficial de ejercicios del Laboratorio.</p>
+                        </div>
+                        <div class="card animate-fade-in delay-2">
+                            <i data-lucide="users" style="color:var(--text-tertiary)"></i>
+                            <h4 style="color:var(--text-secondary)">Aporte Docente</h4>
+                            <p>El contenido restante se integrará con las <span class="highlight">aportaciones de los
+                                    profesores</span>, según se estime conveniente.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 6: Dinámica del Laboratorio -->
+            <section class="slide" id="slide-6">
+                <div class="content">
+                    <h3 class="slide-title">Dinámica del Laboratorio Virtual</h3>
+                    <div class="grid-2">
+                        <!-- La Lección -->
+                        <div class="card animate-fade-in">
+                            <div style="display:flex; align-items:center; gap:15px; margin-bottom:20px;">
+                                <i data-lucide="book-open" style="color:var(--text-tertiary)"></i>
+                                <h4 style="color:var(--text-secondary); margin:0;">1. La Lección</h4>
+                            </div>
+                            <p>Actividad preparatoria diseñada para introducir los conceptos. Cuenta con <span
+                                    class="highlight">intentos ilimitados</span> para asegurar el aprendizaje previo.
+                            </p>
+                        </div>
+
+                        <!-- Actividad Principal -->
+                        <div class="card animate-fade-in delay-1">
+                            <div style="display:flex; align-items:center; gap:15px; margin-bottom:20px;">
+                                <i data-lucide="target" style="color:var(--text-tertiary)"></i>
+                                <h4 style="color:var(--text-secondary); margin:0;">2. Actividad Principal</h4>
+                            </div>
+                            <p>Evaluación de contenido con un máximo de <span class="highlight">7 intentos</span>. El
+                                sistema registrará automáticamente la <span class="highlight">calificación más
+                                    alta</span>.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box animate-slide-up delay-2"
+                        style="margin-top:30px; display:flex; gap:20px; align-items:center;">
+                        <i data-lucide="lock" style="color:var(--text-tertiary); width:40px; height:40px;"></i>
+                        <p>
+                            <span class="highlight">REQUISITO:</span> Si el tema incluye una Lección, esta debe
+                            completarse obligatoriamente para desbloquear el acceso a la Actividad Principal.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 7: Cronograma Maestro -->
+            <section class="slide" id="slide-7">
+                <div class="content" style="max-width: 1200px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                        <h3 class="slide-title" style="margin-bottom:0;">Cronograma de Actividades</h3>
+                        <a href="Cronograma-MM202-2P-2026-Coor.pdf" target="_blank" class="download-btn">
+                            <i data-lucide="file-text"></i> Descargar PDF
+                        </a>
+                    </div>
+
+                    <div class="cronograma-wrapper glass-panel animate-fade-in">
+                        <table id="cronograma-table">
+                            <thead>
+                                <tr>
+                                    <th>Unidad</th>
+                                    <th>Tema</th>
+                                    <th>Modalidad</th>
+                                    <th>Lección (Inicio - Fin)</th>
+                                    <th>Actividad Principal</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cronograma-body">
+                                <!-- Se llenará con script.js -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 8: Jornalización -->
+            <section class="slide" id="slide-8">
+                <div class="content" style="max-width: 1200px;">
+                    <h3 class="slide-title">Jornalización Académica</h3>
+                    <p style="margin-bottom: 20px; color: var(--text-muted);">Seguimiento en tiempo real de las
+                        actividades del Laboratorio vía Google Calendar.</p>
+
+                    <div class="calendar-container glass-panel animate-fade-in">
+                        <!-- CALENDARIOS INTEGRADOS: Actividades de Laboratorio -->
+                        <iframe
+                            src="https://calendar.google.com/calendar/embed?src=c88834762dd352c3941e7a295c6cbd3e4e4579e1097c19968f072b8bed7a538a%40group.calendar.google.com&color=%234CC9F0&src=26bd1874baab4d5dbdea9e2bc459e801e5d1ea3594abcaa39b5b6e1afc9dcc3d%40group.calendar.google.com&color=%23FFD166&ctz=America%2FTegucigalpa&mode=AGENDA&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0&showTz=1"
+                            style="border: 0; width: 100%; height: 500px; border-radius: 15px; filter: invert(0.9) hue-rotate(180deg);"
+                            frameborder="0" scrolling="no">
+                        </iframe>
+                    </div>
+                    <div style="margin-top: 20px; text-align: center;">
+                        <span class="badge"
+                            style="background: var(--text-tertiary); color: var(--bg-dark);">Sincronizado</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 9: Repositorio Digital -->
+            <section class="slide" id="slide-9">
+                <div class="content" style="max-width: 1200px;">
+                    <h3 class="slide-title">Repositorio Digital</h3>
+                    <p style="margin-bottom: 20px; color: var(--text-muted);">Acceso directo a sílabos, guías de
+                        ejercicios y recursos complementarios en Google Drive.</p>
+
+                    <div class="drive-container glass-panel animate-fade-in">
+                        <!-- REPOSITORIO REAL: Carpeta de Documentos Académicos -->
+                        <iframe
+                            src="https://drive.google.com/embeddedfolderview?id=1xrTJFMv46dYu32fxNne-Pt4XmbjyOMP7#list"
+                            style="width:100%; height:500px; border:0; border-radius:15px;" frameborder="0">
+                        </iframe>
+                    </div>
+                    <div style="margin-top: 20px; display:flex; justify-content:center; gap:20px;">
+                        <span class="badge"
+                            style="background: var(--text-secondary); color: var(--bg-dark);">Sílabo</span>
+                        <span class="badge"
+                            style="background: var(--text-tertiary); color: var(--bg-dark);">Guías</span>
+                        <span class="badge" style="background: var(--accent); color: var(--bg-dark);">Material
+                            Académico</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 10: Fechas Clave del Periodo -->
+            <section class="slide" id="slide-10">
+                <div class="content">
+                    <h3 class="slide-title">Fechas Clave del Periodo</h3>
+                    <div class="timeline">
+                        <div class="timeline-item animate-slide-up">
+                            <div class="time">Viernes, 5 de Junio</div>
+                            <div class="desc">
+                                Primer Examen Parcial (Unidad 1)
+                                <br><small>Hora: 7:00 AM - 8:50 AM</small>
+                            </div>
+                        </div>
+                        <div class="timeline-item animate-slide-up delay-1">
+                            <div class="time">Viernes, 3 de Julio</div>
+                            <div class="desc">
+                                Segundo Examen Parcial (Unidad 2)
+                                <br><small>Hora: 7:00 AM - 8:50 AM</small>
+                            </div>
+                        </div>
+                        <div class="timeline-item animate-slide-up delay-2">
+                            <div class="time">Viernes, 31 de Julio</div>
+                            <div class="desc">
+                                Tercer Examen Parcial (Unidad 3)
+                                <br><small>Hora: 7:00 AM - 8:50 AM</small>
+                            </div>
+                        </div>
+                        <div class="timeline-item animate-slide-up delay-3">
+                            <div class="time" style="color: var(--text-tertiary);">Viernes, 7 de Agosto</div>
+                            <div class="desc">
+                                <span class="highlight">Examen de Reposición</span>
+                                <br><small>Hora: 7:00 AM - 8:50 AM</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 11: Coordinación -->
+            <section class="slide" id="slide-11">
+                <div class="content">
+                    <h3 class="slide-title">Coordinación</h3>
+                    <div class="contact-grid">
+                        <div class="contact-card animate-pop card">
+                            <i data-lucide="mail" style="color:var(--text-tertiary)"></i>
+                            <h4 style="color:var(--text-secondary)">Correo Institucional</h4>
+                            <p class="highlight">erickpineda@unah.edu.hn</p>
+                        </div>
+                        <div class="contact-card animate-pop delay-1 card">
+                            <i data-lucide="message-square" style="color:var(--text-tertiary)"></i>
+                            <h4 style="color:var(--text-secondary)">Canal de Telegram</h4>
+                            <p class="highlight" style="margin-bottom:15px;">MM202 - Comunidad Docente</p>
+                            <div class="qr-wrapper">
+                                <img src="Coordinacion-QR.png" alt="QR Canal Telegram" class="qr-image">
+                                <p style="font-size:0.7rem; color:var(--text-muted); margin-top:5px;">Escanea para
+                                    unirte</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 12: Cierre -->
+            <section class="slide" id="slide-12">
+                <div class="content center">
+                    <h1 class="animate-pop">¡Éxito en el Periodo!</h1>
+                    <p class="animate-fade-in delay-1"
+                        style="font-size: 1.5rem; color: var(--text-muted); margin-top: 20px;">
+                        Trabajando juntos por la <span class="highlight">excelencia académica</span> en MM202.
+                    </p>
+                    <div class="logo-placeholder"
+                        style="color: var(--text-secondary); margin-top: 60px; letter-spacing: 8px; font-weight: 300; font-family: 'Montserrat', sans-serif;">
+                        COORDINACIÓN DE CÁLCULO II
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

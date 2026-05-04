@@ -386,4 +386,11 @@ document.addEventListener('DOMContentLoaded', () => {
     generateIndex();
     loadCronograma();
     updateSlides();
+
+    // --- Telegram WebApp Integration ---
+    if (window.Telegram && window.Telegram.WebApp) {
+        const tg = window.Telegram.WebApp;
+        tg.ready();
+        tg.expand(); // Expande la app a pantalla completa en Telegram
+    }
 });
